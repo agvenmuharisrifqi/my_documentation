@@ -1,0 +1,24 @@
+site_name: Catatan Pribadi Agven M.R.
+repo_url: https://github.com/pt.-artsys-integrasi-solusindo/gfk/odoo14c_gfk.git
+nav:
+    - Pendahuluan: index.md
+    - Belajar:
+        - Docker: 
+            - Docker Dasar : belajar/docker/base.md
+            - Dockerfile : belajar/docker/file.md
+            - Docker Compose : belajar/docker/compose.md
+        - Next JS: belajar/next.md
+theme: 
+    name: readthedocs
+    custom_dir: custom_theme
+extra_css:
+    - assets/css/extra_css.css
+    - assets/css/copy_code.css
+extra_javascript:
+    - assets/js/clipboard.min.js
+    - assets/js/copy_code.js
+markdown_extensions:
+    - admonition
+    - attr_list
+plugins:
+    - search
