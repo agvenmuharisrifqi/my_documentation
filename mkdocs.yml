@@ -7,10 +7,23 @@ nav:
             - Docker Dasar : belajar/docker/base.md
             - Dockerfile : belajar/docker/file.md
             - Docker Compose : belajar/docker/compose.md
+        - Monitoring: 
+            - Prometheus : belajar/monitoring/prometheus.md
+            - Grafana : belajar/monitoring/grafana.md
+        - Ansible: 
+            - Ansible Dasar : belajar/ansible/base.md
+            - Ansible Inventory : belajar/ansible/inventory.md
+            - Ansible Playbook : belajar/ansible/playbook.md
+            - Ansible Role : belajar/ansible/role.md
         - Next JS: belajar/next.md
 theme: 
     name: readthedocs
     custom_dir: custom_theme
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+        - zsh
 extra_css:
     - assets/css/extra_css.css
     - assets/css/copy_code.css
