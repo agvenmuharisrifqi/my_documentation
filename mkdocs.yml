@@ -4,18 +4,22 @@ nav:
     - Pendahuluan: index.md
     - Belajar:
         - Docker: 
-            - Docker Dasar : belajar/docker/base.md
-            - Dockerfile : belajar/docker/file.md
-            - Docker Compose : belajar/docker/compose.md
+            - Docker Dasar      : belajar/docker/01_base.md
+            - Dockerfile        : belajar/docker/02_file.md
+            - Docker Compose    : belajar/docker/03_compose.md
         - Monitoring: 
-            - Prometheus : belajar/monitoring/prometheus.md
-            - Grafana : belajar/monitoring/grafana.md
+            - Prometheus        : belajar/monitoring/01_prometheus.md
+            - Grafana           : belajar/monitoring/02_grafana.md
         - Ansible: 
-            - Ansible Dasar : belajar/ansible/base.md
-            - Ansible Inventory : belajar/ansible/inventory.md
-            - Ansible Playbook : belajar/ansible/playbook.md
-            - Ansible Role : belajar/ansible/role.md
-        - Next JS: belajar/next.md
+            - Ansible Dasar     : belajar/ansible/01_base.md
+            - Ansible Inventory : belajar/ansible/02_inventory.md
+            - Ansible Playbook  : belajar/ansible/03_playbook.md
+            - Ansible Role      : belajar/ansible/04_role.md
+        - Next JS:
+            - Next Dasar        : belajar/next/01_base.md
+    - Catatan:
+        - About                 : catatan/about.md
+        - Technical             : catatan/technical.md
 theme: 
     name: readthedocs
     custom_dir: custom_theme

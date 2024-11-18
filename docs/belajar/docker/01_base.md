@@ -1,4 +1,4 @@
-# Catatan Belajar Docker Dasar 📝 🐳
+# Catatan Belajar Docker Dasar 📝
 -------------------------------------------
 
 Container berfokus pada aplikasi. Container sendiri sebenarnya berjalan di atas aplikasi Container Manager yang berjalan di sistem operasi. Container akan menggunakan sistem operasi host dimana Container Manager berjalan. Dan Docker merupakan sebuah Container Manager.
