@@ -13,6 +13,7 @@ copyright: Copyright &copy; Oct 2024 - Now Agven Muharis Rifqi
 
 theme: 
   name: material
+  language: id
   custom_dir: overrides
   icon: 
     repo: fontawesome/brands/github-alt
@@ -39,14 +40,14 @@ theme:
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: indigo
       toggle:
-        icon: material/toggle-switch-off
+        icon: material/brightness-4
         name: Switch to system preference
   font:
       text: Roboto
