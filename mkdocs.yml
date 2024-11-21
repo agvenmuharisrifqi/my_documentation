@@ -1,41 +1,104 @@
-site_name: Catatan Pribadi Agven M.R.
-repo_url: https://github.com/pt.-artsys-integrasi-solusindo/gfk/odoo14c_gfk.git
-nav:
-    - Pendahuluan: index.md
-    - Belajar:
-        - Docker: 
-            - Docker Dasar      : belajar/docker/01_base.md
-            - Dockerfile        : belajar/docker/02_file.md
-            - Docker Compose    : belajar/docker/03_compose.md
-        - Monitoring: 
-            - Prometheus        : belajar/monitoring/01_prometheus.md
-            - Grafana           : belajar/monitoring/02_grafana.md
-        - Ansible: 
-            - Ansible Dasar     : belajar/ansible/01_base.md
-            - Ansible Inventory : belajar/ansible/02_inventory.md
-            - Ansible Playbook  : belajar/ansible/03_playbook.md
-            - Ansible Role      : belajar/ansible/04_role.md
-        - Next JS:
-            - Next Dasar        : belajar/next/01_base.md
-    - Catatan:
-        - About                 : catatan/about.md
-        - Technical             : catatan/technical.md
+site_name: Agven Muharis Rifqi
+site_url: https://agvenmuharisrifqi.github.io/my_documentation
+site_author: Agven Muharis Rifqi
+site_description: >-
+  Write your documentation in Markdown and create a professional static site in
+  minutes – searchable, customizable, in 60+ languages, for all devices
+
+repo_name: agvenmuharisrifqi/my_documentation
+repo_url: https://github.com/agvenmuharisrifqi/my_documentation
+edit_uri: /main/docs/
+
+copyright: Copyright &copy; Oct 2024 - Now Agven Muharis Rifqi
+
 theme: 
-    name: readthedocs
-    custom_dir: custom_theme
-    highlightjs: true
-    hljs_languages:
-        - yaml
-        - rust
-        - zsh
+  name: material
+  custom_dir: overrides
+  icon: 
+    repo: fontawesome/brands/github-alt
+  features:
+    - content.tooltips
+    - content.action.edit
+    - content.action.view
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+      text: Roboto
+      code: Roboto Mono
+
 extra_css:
-    - assets/css/extra_css.css
-    - assets/css/copy_code.css
-extra_javascript:
-    - assets/js/clipboard.min.js
-    - assets/js/copy_code.js
+  - assets/css/extra_css.css
+
 markdown_extensions:
-    - admonition
-    - attr_list
+  - abbr
+  - attr_list
+  - admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
 plugins:
-    - search
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+extra:
+  repo:
+    facts:
+      - latest
+      - stars
+      - forks
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/agvenmuharisrifqi
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/agvenmuharisrifqi
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/agven-muharis-rifqi-0008b81a0
+
+nav:
+  - Beranda: index.md
+  - Belajar:
+    - Container:
+      - Docker            : belajar/container/docker.md
+    - Provisioning:
+      - Ansible           : belajar/provisioning/ansible.md
+    - Monitoring: 
+      - Prometheus        : belajar/monitoring/prometheus.md
+      - Grafana           : belajar/monitoring/grafana.md
+  - Catatan:
+    - About                 : catatan/about.md
+    - Technical             : catatan/technical.md

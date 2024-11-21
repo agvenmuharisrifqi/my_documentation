@@ -1,17 +1,19 @@
-# Catatan Belajar Docker Dasar 📝
+# Docker :simple-docker:
 -------------------------------------------
 
+Docker adalah platform perangkat lunak open-source yang memungkinkan pengembang untuk membangun, menguji, dan menyebarkan aplikasi dengan cepat. Docker mengemas perangkat lunak ke dalam unit standar yang disebut kontainer, yang berisi semua yang dibutuhkan untuk menjalankan aplikasi.
+
+## Docker Dasar
+-------------------------------------------
 Container berfokus pada aplikasi. Container sendiri sebenarnya berjalan di atas aplikasi Container Manager yang berjalan di sistem operasi. Container akan menggunakan sistem operasi host dimana Container Manager berjalan. Dan Docker merupakan sebuah Container Manager.
 
 
-## Install
--------------------------------------------
+### Install
 
 Untuk menginstall docker bisa dilihat [Docker Docs.](https://docs.docker.com/get-started/get-docker/)
 
 
-## Docker Registry
--------------------------------------------
+### Docker Registry
 
 Docker Registry merupakan sebuah tempat untuk menyimpan image. Dengan menggunakan Docker Registry, kita bisa menyimpan image yang kita buat dan bisa digunakan di Docker Daemon dimanapun selama bisa terkoneksi ke Docker Registry. Dan kita juga bisa menggunakan image yang sudah dibuat oleh orang lain.
 
@@ -24,7 +26,7 @@ Docker Registry merupakan sebuah tempat untuk menyimpan image. Dengan menggunaka
 * [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry)
 
 
-## Image
+### Image
 -------------------------------------------
 
 Docker Image mirip seperti installer aplikasi, dimana di dalam Docker Image terdapat aplikasi dan dependency. Image yang digunakan oleh Container tidak bisa dihapus.
@@ -47,8 +49,7 @@ docker image rm [image-name:tag]
 ```
 
 
-## Volume
--------------------------------------------
+### Volume
 
 Volume mirip dengan Bind Mounts, bedanya adalah terdapat management Volume, dimana kita bisa membuat, menghapus, dan melihat daftar Volume.
 
@@ -72,8 +73,7 @@ docker volume rm [volume-name]
 ```
 
 
-## Container
--------------------------------------------
+### Container
 
 Satu Docker Image bisa digunakan oleh beberapa Docker Container dengan syarat nama Docker Container berbeda.
 
@@ -110,7 +110,7 @@ docker container rm [container-name/container-id]
 ```
 
 
-### Container Log
+#### Container Log
 
 Container Log digunakan untuk melihat log aplikasi di container.
 
@@ -127,7 +127,7 @@ docker container logs -f [container-name/container-id]
 ```
 
 
-### Container Exec
+#### Container Exec
 
 Container Exec digunakan untuk masuk ke dalam container itu sendiri. Container Exec dapat digunakan untuk mengeksekusi kode program yang ada di dalam container.
 
@@ -142,7 +142,7 @@ docker container exec -i -t [container-name/container-id] [command-to-execute]
 ```
 
 
-### Container Port
+#### Container Port
 
 Container pada dasarnya terisolasi di dalam Docker (Sistem Host tidak bisa mengakses aplikasi yang terdapat di dalam Container). Salah satu cara untuk mengaksesnya adalah menggunakan Container Exec.
 
@@ -156,7 +156,7 @@ docker container create --name [container-name] --publish [port-host:port-contai
 ```
 
 
-### Container Environment Variable
+#### Container Environment Variable
 
 Digunakan untuk mengubah-ubah konfigurasi aplikasi secara dinamis.
 
@@ -168,7 +168,7 @@ docker container create --name [container-name] --env [KEY1=VALUE1] --env [KEY2=
 ```
 
 
-### Container Stats
+#### Container Stats
 
 Digunakan untuk penggunaan resource yang digunakan oleh masing-masing container.
 
@@ -182,13 +182,37 @@ docker container stats
 | 420cb284a23d | contohpostgres |0.00%|22.29MiB / 7.64GiB|0.28%|16.9kB / 3.58kB|15.9MB / 23.1MB|6   |
 
 
-### Container Resource Limit
+#### Container Resource Limit
+
+
+#### Container Volume
 
 
 
+## Dockerfile
+-------------------------------------------
 
-### Container Volume
 
 
+**Example**
 
+```docker title="Dockerfile"
+FROM ubuntu
+
+# Install vnc, xvfb in order to create a 'fake' display and firefox
+RUN apt-get update && apt-get install -y x11vnc xvfb firefox
+RUN mkdir ~/.vnc
+
+# Setup a password
+RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
+
+# Autostart firefox (might not be the best way, but it does the trick)
+RUN bash -c 'echo "firefox" >> /.bashrc'
+
+EXPOSE 5900
+CMD ["x11vnc", "-forever", "-usepw", "-create"]
+```
+
+## Docker Compose
+-------------------------------------------
 

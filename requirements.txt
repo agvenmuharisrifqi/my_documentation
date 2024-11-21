@@ -10,6 +10,7 @@ mkdocs-get-deps==0.2.0
 packaging==24.1
 pathspec==0.12.1
 platformdirs==4.3.6
+pygments==2.18.0
 python-dateutil==2.9.0.post0
 PyYAML==6.0.2
 pyyaml-env-tag==0.1
