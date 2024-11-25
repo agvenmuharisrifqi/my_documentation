@@ -2,7 +2,88 @@
 
 {% block tabs %}
 {{ super() }}
-<!-- <style>
+<style>
+    #hero-section {
+        background: var(--md-primary-fg-color);
+    }
+
+    .hero__section {
+        margin: 32px 1rem;
+        color: var(--md-primary-bg-color);
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .tx-hero__image{
+        width:17rem;
+        height:17rem;
+        padding-right: 2.5rem;
+    }
+    .img-fluid{
+        max-width: 100%;
+        height: auto
+    }
+    .w-100 {
+        width: 100% !important
+    }
+</style>
+<section id="hero-section">
+    <div class="md-grid md-typeset">
+        <div class="hero__section">
+            <div>
+                <h4>Full-stack Developer</h1>
+                <h1>Agven Muharis Rifqi</h1>
+                <p>Menyelesaikan permasalahan dengan CODING adalah suatu KESENANGAN tersendiri untuk SAYA.</p>
+            </div>
+            <div>
+                <div style="object-fit: cover;">
+                    <img src="assets/img/rb_3581.png" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="md-grid md-typeset">
+        <div class="tx-hero">
+            <div class="tx-hero__image">
+                <img src="assets/img/rb_3581.png" draggable="false">
+            </div>
+            <div class="tx-hero__content">
+                <h1>Agven Muharis Rifqi</h1>
+                <p>Menyelesaikan permasalahan dengan CODING adalah suatu KESENANGAN tersendiri untuk SAYA.</p>
+                <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
+                    Get started
+                </a>
+                <a href="{{ config.repo_url }}" title="Pelajari lebih" class="md-button md-button--secondary">
+                    Go to GitHub
+                </a>
+            </div>
+        </div>
+    </div> -->
+</section>
+{% endblock %}
+
+<!--
+
+-->
+
+{% block content %}
+<style>
+    .md-sidebar--primary {
+        display: none
+    }
+    @media screen and (min-width: 60em) {
+        .md-sidebar--secondary:not([hidden]) {
+            display: none;
+        }
+    }
+</style>
+<section>
+    <div>Content</div>
+</section>
+{% endblock %}
+
+<!-- yle>
 
     .md-main {
         flex-grow: 0
@@ -216,26 +297,7 @@
     }
 </style> -->
 
-
-<section class="tx-container">
-    <div class="md-grid md-typeset">
-      <div class="tx-hero">
-        <div class="tx-hero__image">
-          <img src="assets/product-layers.png" draggable="false">
-        </div>
-        <div class="tx-hero__content">
-          <h1> UP42 Python SDK </h1>
-          <p>Access UP42's geospatial collections and processing workflows via Python.</p>
-          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
-            Get started
-          </a>
-          <a href="{{ config.repo_url }}" title="Pelajari lebih" class="md-button md-button--secondary">
-            Go to GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-</section>
+<!-- 
 
 
 <div class="top-hr">
@@ -258,9 +320,17 @@
         </h2>
         <p>Use UP42 together with your preferred Python libraries. </p>
     </div>
-</div>
+</div> -->
+
+{% block footer %}
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            {% include "partials/copyright.html" %}
+            {% if config.extra.social %}
+                {% include "partials/social.html" %}
+            {% endif %}
+        </div>
+    </div>
+</footer>
 {% endblock %}
-
-{% block content %}{% endblock %}
-
-{% block footer %}{% endblock %}

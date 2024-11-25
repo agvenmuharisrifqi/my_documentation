@@ -1,9 +1,7 @@
 ---
 template: home.html
 title: Selamat Datang
-social:
-  cards_layout_options:
-    title: Documentation that simply works
+description: Agven Muharis Rifqi - Full-stack Developer
 ---
 
 ![Catatan Pribadi Logo](assets/img/logo.png){: .img_hero }
