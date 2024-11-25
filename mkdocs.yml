@@ -37,19 +37,19 @@ theme:
     - content.tabs.link
   palette:
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
+      scheme: slate
+      primary: black
+      accent: amber
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: indigo
+      scheme: default
+      primary: indigo
+      accent: green
       toggle:
         icon: material/brightness-4
-        name: Switch to system preference
+        name: Switch to light mode
   font:
       text: Roboto
       code: Roboto Mono
