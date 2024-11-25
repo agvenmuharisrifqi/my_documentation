@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://agvenmuharisrifqi.github.io/my_documentation/</loc>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://agvenmuharisrifqi.github.io/my_documentation/belajar/container/docker/</loc>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://agvenmuharisrifqi.github.io/my_documentation/belajar/monitoring/grafana/</loc>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://agvenmuharisrifqi.github.io/my_documentation/belajar/monitoring/prometheus/</loc>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://agvenmuharisrifqi.github.io/my_documentation/belajar/provisioning/ansible/</loc>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://agvenmuharisrifqi.github.io/my_documentation/catatan/about/</loc>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://agvenmuharisrifqi.github.io/my_documentation/catatan/technical/</loc>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+</urlset>
