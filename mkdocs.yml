@@ -55,7 +55,7 @@ theme:
       code: Roboto Mono
 
 extra_css:
-  - assets/css/extra_css.css
+  - assets/css/home.css
 
 markdown_extensions:
   - abbr
