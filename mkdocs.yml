@@ -106,11 +106,16 @@ nav:
   - Belajar:
     - Container:
       - Docker            : belajar/container/docker.md
+    - Virtualization:
+      - Vagrant           : belajar/virtualization/vagrant.md
     - Provisioning:
       - Ansible           : belajar/provisioning/ansible.md
     - Monitoring: 
       - Prometheus        : belajar/monitoring/prometheus.md
       - Grafana           : belajar/monitoring/grafana.md
+    - Load Testing: 
+      - Locust            : belajar/load_testing/locust.md
   - Catatan:
-    - About                 : catatan/about.md
-    - Technical             : catatan/technical.md
+    - OpenVPN             : catatan/openvpn.md
+    - About               : catatan/about.md
+    - Technical           : catatan/technical.md
