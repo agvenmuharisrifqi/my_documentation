@@ -1,0 +1,41 @@
+.img_center {
+    display: block;
+    margin: auto;
+}
+
+.img_hero {
+    display: block;
+    margin: auto;
+    width: 25rem;
+}
+
+.admonition {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+}
+
+.admonition .admonition-title {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* TEXT STYLE */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-base {
+    font-size: 1rem;
+}
