@@ -62,6 +62,7 @@ markdown_extensions:
   - attr_list
   - admonition
   - tables
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -79,11 +80,29 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.caret
   - pymdownx.details
+  - pymdownx.blocks.caption
   - toc:
       permalink: true
 
 plugins:
   - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_themed: false
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
   - git-revision-date-localized:
       enable_creation_date: true
 
@@ -115,6 +134,10 @@ nav:
       - Grafana           : belajar/monitoring/grafana.md
     - Load Testing: 
       - Locust            : belajar/load_testing/locust.md
+    - ETL Tools:
+      - Airbyte           : belajar/etl/airbyte.md
+    - Server:
+      - NAT VPS           : belajar/server/nat_vps.md
   - Catatan:
     - OpenVPN             : catatan/openvpn.md
     - About               : catatan/about.md
